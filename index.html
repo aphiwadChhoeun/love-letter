@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Love Letter — a digital game of royal intrigue. Win the Princess's favor with cunning, luck, and a well-placed letter."
+    />
+    <meta name="theme-color" content="#140b0e" />
+    <title>Love Letter — A Game of Royal Intrigue</title>
+    <link rel="icon" href="assets/crest.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-title">
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="i-rules" viewBox="0 0 24 24">
+        <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22V5.5Z" />
+        <path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22V5.5Z" />
+      </symbol>
+      <symbol id="i-scroll" viewBox="0 0 24 24">
+        <path d="M7 4h12a2 2 0 0 1 2 2v12a2 2 0 0 0 2 2H9a2 2 0 0 0-2-2V4Z" />
+        <path d="M7 4a2 2 0 0 0-2 2v12a2 2 0 0 1-2 2h4" />
+        <path d="M11 8h6M11 12h6M11 16h4" />
+      </symbol>
+      <symbol id="i-sound" viewBox="0 0 24 24">
+        <path d="M4 9v6h4l5 4V5L8 9H4Z" />
+        <path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" />
+      </symbol>
+      <symbol id="i-mute" viewBox="0 0 24 24">
+        <path d="M4 9v6h4l5 4V5L8 9H4Z" />
+        <path d="m17 9 5 6M22 9l-5 6" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11Z" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 3l7 3v5c0 5-3.2 8.4-7 10-3.8-1.6-7-5-7-10V6l7-3Z" />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+      <symbol id="i-crown" viewBox="0 0 24 24">
+        <path d="m3 8 4.5 3L12 5l4.5 6L21 8l-2 10H5L3 8Z" />
+        <path d="M5 21h14" />
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path d="m8 10 4 4 4-4" />
+      </symbol>
+      <symbol id="i-swap" viewBox="0 0 24 24">
+        <path d="M4 8h13l-3-3M20 16H7l3 3" />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M4 12h16M14 6l6 6-6 6" />
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3" />
+        <path d="M3 20a6 6 0 0 1 12 0M16 5.5a3 3 0 0 1 0 5.8M18 14a5 5 0 0 1 3 4.6" />
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z" />
+        <circle cx="12" cy="12" r="2.7" />
+      </symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24">
+        <path d="M12 2c.8 5.4 3.8 8.4 9 9-5.2.6-8.2 3.6-9 9-.8-5.4-3.8-8.4-9-9 5.2-.6 8.2-3.6 9-9Z" />
+      </symbol>
+    </svg>
+
+    <div class="atmosphere" aria-hidden="true">
+      <div class="atmosphere__painting"></div>
+      <div class="atmosphere__damask"></div>
+      <div class="atmosphere__wash"></div>
+      <div class="atmosphere__glow atmosphere__glow--left"></div>
+      <div class="atmosphere__glow atmosphere__glow--right"></div>
+      <div class="atmosphere__grain"></div>
+      <div class="atmosphere__vignette"></div>
+    </div>
+
+    <div class="app" id="app">
+      <header class="topbar">
+        <button class="brand" id="brand" type="button" aria-label="Open the court menu">
+          <span class="brand__mark">LL</span>
+          <span class="brand__text">
+            <span class="brand__title">Love Letter</span>
+            <span class="brand__sub">A game of royal intrigue</span>
+          </span>
+        </button>
+
+        <div class="round-meta" id="round-meta"></div>
+
+        <div class="topbar__actions">
+          <button class="icon-btn" id="btn-rules" type="button" title="Rules" aria-label="Rules">
+            <svg><use href="#i-rules"></use></svg>
+          </button>
+          <button class="icon-btn" id="btn-journal" type="button" title="Chronicle" aria-label="Chronicle">
+            <svg><use href="#i-scroll"></use></svg>
+          </button>
+          <button class="icon-btn" id="btn-sound" type="button" title="Sound" aria-label="Toggle sound">
+            <svg><use href="#i-sound"></use></svg>
+          </button>
+          <button class="icon-btn" id="btn-menu" type="button" title="Menu" aria-label="Menu">
+            <svg><use href="#i-menu"></use></svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="table-layout" id="table-layout">
+        <aside class="sidebar" id="sidebar" aria-label="Court information">
+          <button class="sidebar__close" id="sidebar-close" type="button" aria-label="Close the chronicle">
+            <svg><use href="#i-close"></use></svg>
+          </button>
+          <section class="panel deck-panel" id="deck-panel"></section>
+          <section class="panel favor-panel" id="favor-panel"></section>
+          <section class="panel chronicle-panel" id="chronicle-panel">
+            <div class="panel__head">
+              <h2>The Chronicle</h2>
+              <span class="panel__kicker" id="chronicle-kicker"></span>
+            </div>
+            <ol class="chronicle" id="chronicle" aria-live="polite"></ol>
+          </section>
+        </aside>
+
+        <section class="court" id="court" aria-label="The court">
+          <div class="opponents" id="opponents"></div>
+
+          <div class="stage" id="stage">
+            <div class="turn-banner" id="turn-banner" aria-live="polite"></div>
+            <div class="stage__center" id="stage-center"></div>
+            <div class="effect-banner" id="effect-banner" aria-live="polite"></div>
+          </div>
+
+          <div class="human-zone" id="human-zone"></div>
+        </section>
+      </main>
+      <div class="journal-backdrop" id="journal-backdrop"></div>
+    </div>
+
+    <div class="toast-layer" id="toast-layer" aria-live="polite"></div>
+    <div class="modal-layer" id="modal-layer"></div>
+
+    <section class="title-screen" id="title-screen" aria-label="Start a game">
+      <div class="title-screen__inner">
+        <div class="title-copy">
+          <p class="eyebrow"><span></span>The royal court awaits<span></span></p>
+          <h1 class="game-logo">Love <em>Letter</em></h1>
+          <p class="title-lede">
+            The Princess is choosing a confidant. Slip your letter into the right hands,
+            guard your secrets, and let the court do the rest.
+          </p>
+
+          <div class="setup" id="setup">
+            <div class="setup__row">
+              <span class="setup__label">Suitors</span>
+              <div class="segmented segmented--small" id="setup-players" role="group" aria-label="Number of players">
+                <button type="button" data-value="2">2</button>
+                <button type="button" data-value="3">3</button>
+                <button type="button" data-value="4" class="is-active">4</button>
+                <button type="button" data-value="5">5</button>
+                <button type="button" data-value="6">6</button>
+              </div>
+            </div>
+            <div class="setup__row">
+              <span class="setup__label">Edition</span>
+              <div class="segmented" id="setup-mode" role="group" aria-label="Edition">
+                <button type="button" data-value="court" class="is-active">Full Court</button>
+                <button type="button" data-value="classic">Classic</button>
+              </div>
+            </div>
+            <div class="setup__row">
+              <span class="setup__label">Rivals</span>
+              <div class="segmented" id="setup-difficulty" role="group" aria-label="AI difficulty">
+                <button type="button" data-value="gentle">Gentle</button>
+                <button type="button" data-value="courtier" class="is-active">Courtier</button>
+                <button type="button" data-value="ruthless">Ruthless</button>
+              </div>
+            </div>
+            <label class="name-field">
+              <span>Your name</span>
+              <input id="setup-name" maxlength="18" autocomplete="off" spellcheck="false" placeholder="You" />
+            </label>
+          </div>
+
+          <div class="title-actions">
+            <button class="btn btn--primary btn--large" id="btn-begin" type="button">
+              Enter the Court
+              <svg><use href="#i-arrow"></use></svg>
+            </button>
+            <button class="btn btn--ghost" id="btn-title-rules" type="button">How to Play</button>
+          </div>
+
+          <p class="title-footnote" id="setup-summary"></p>
+        </div>
+
+        <div class="title-art" aria-hidden="true">
+          <div class="title-card title-card--back-one"><img src="assets/card-back.svg" alt="" /></div>
+          <div class="title-card title-card--face">
+            <div class="title-card__art"></div>
+            <div class="title-card__sheen"></div>
+            <span class="title-card__value">IX</span>
+            <div class="title-card__plate">
+              <span>Princess</span>
+              <small>The Prize</small>
+            </div>
+          </div>
+          <div class="title-card title-card--back-two"><img src="assets/card-back.svg" alt="" /></div>
+          <div class="title-seal">
+            <img src="assets/crest.svg" alt="" />
+          </div>
+          <div class="title-art__caption">
+            <span>Sealed with a promise</span>
+            <i></i>
+          </div>
+        </div>
+      </div>
+      <footer class="title-footer">
+        <span>After Seiji Kanai</span>
+        <span class="title-footer__dot"></span>
+        <span>Portraits from the public domain</span>
+        <span class="title-footer__dot"></span>
+        <span>Best experienced with sound</span>
+      </footer>
+    </section>
+
+    <noscript>
+      <div class="noscript">This court requires JavaScript to deal the cards.</div>
+    </noscript>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

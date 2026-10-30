@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="The royal crest">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7e3a5"/>
+      <stop offset=".36" stop-color="#c79c45"/>
+      <stop offset=".62" stop-color="#e7c878"/>
+      <stop offset="1" stop-color="#926a25"/>
+    </linearGradient>
+    <radialGradient id="w" cx="40%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#9e3040"/>
+      <stop offset=".6" stop-color="#661522"/>
+      <stop offset="1" stop-color="#3c0b13"/>
+    </radialGradient>
+    <filter id="s" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#000" flood-opacity=".5"/>
+    </filter>
+  </defs>
+  <g filter="url(#s)">
+    <g fill="none" stroke="url(#g)" stroke-width="2.2" stroke-linecap="round" opacity=".95">
+      <path d="M96 286c-38-34-51-83-36-124 8 17 12 31 12 48 15-27 37-45 67-54-12 17-19 34-20 52 23-21 51-32 81-32s58 11 81 32c-1-18-8-35-20-52 30 9 52 27 67 54 0-17 4-31 12-48 15 41 2 90-36 124"/>
+      <path d="M111 302c-25-18-41-45-47-77 20 14 34 31 42 52M289 302c25-18 41-45 47-77-20 14-34 31-42 52"/>
+    </g>
+    <g fill="none" stroke="#b8873c" stroke-width="1" opacity=".65">
+      <path d="M127 121c11-9 22-15 35-19M273 121c-11-9-22-15-35-19M112 138c0 17 4 31 12 45M288 138c0 17-4 31-12 45"/>
+    </g>
+
+    <path d="M200 128c32 26 57 62 53 100-4 45-38 80-53 98-15-18-49-53-53-98-4-38 21-74 53-100Z" fill="url(#w)" stroke="url(#g)" stroke-width="2.4"/>
+    <path d="M200 145c25 21 44 50 41 81-3 36-30 64-41 78-11-14-38-42-41-78-3-31 16-60 41-81Z" fill="none" stroke="#e2bf72" stroke-width="1.4" opacity=".8"/>
+    <path d="M200 194c-3-10-20-15-20-29 0-9 8-15 14-12 3 1 5 4 6 8 1-4 3-7 6-8 6-3 14 3 14 12 0 14-17 19-20 29Z" fill="#f7e9bc"/>
+    <path d="M170 206c9 5 20 7 30 7s21-2 30-7" fill="none" stroke="#d7ae5c" stroke-width="1.3"/>
+
+    <path d="M153 84l16-26 13 16 13-36 15 22 14-22 13 36 13-16 17 26c-20 8-38 11-57 11s-37-3-57-11Z" fill="url(#g)" stroke="#8d6727" stroke-width="1.2"/>
+    <g fill="#631521">
+      <circle cx="181" cy="75" r="3"/>
+      <circle cx="200" cy="65" r="3"/>
+      <circle cx="219" cy="75" r="3"/>
+    </g>
+    <path d="M170 91c20 4 40 4 60 0" fill="none" stroke="#8d6727" stroke-width="2"/>
+  </g>
+  <g fill="#d8b266" opacity=".85">
+    <path d="M200 356l5 10 11 1-8 8 2 11-10-5-10 5 2-11-8-8 11-1Z"/>
+  </g>
+</svg>

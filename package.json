@@ -1,0 +1,11 @@
+{
+  "name": "love-letter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A digital tribute to Love Letter — a game of royal intrigue.",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
