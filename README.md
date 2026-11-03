@@ -20,6 +20,14 @@ npm test
 
 runs the rules-engine and AI simulation test suite (25 tests).
 
+## Screenshots
+
+| Title screen | Gameplay |
+| --- | --- |
+| ![Title screen](assets/screenshots/title.jpeg) | ![Gameplay](assets/screenshots/gameplay.jpeg) |
+
+![How to play](assets/screenshots/rules.jpeg)
+
 ## What's inside
 
 - **Complete 2025 rules** — 2–6 suitors, 21 cards, including the **Chancellor** and **Spy**.
